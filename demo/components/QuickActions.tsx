@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Card } from 'primereact/card';
-import { Button } from 'primereact/button';
 import { useRouter } from 'next/navigation';
 
 interface QuickAction {
@@ -72,24 +71,25 @@ const QuickActions: React.FC = () => {
     };
 
     return (
-        <Card className="mb-4">
+        <Card className="mb-4 mr-0 lg:mr-3">
             <div className="flex align-items-center justify-content-between mb-3">
                 <h3 className="text-xl m-0 font-500">Quick Actions</h3>
                 <i className="pi pi-bolt text-yellow-500 text-xl"></i>
             </div>
-            
+
             <div className="grid">
                 {quickActions.map((action) => (
                     <div key={action.id} className="col-12 sm:col-6 lg:col-4 xl:col-2">
                         <div
-                            className="quick-action-card p-3 border-round cursor-pointer transition-all transition-duration-200 hover:shadow-3 text-center"
+                            className="quick-action-card p-3 border-round cursor-pointer transition-all transition-duration-200 hover:shadow-3 text-center h-full flex flex-column"
                             onClick={() => handleActionClick(action)}
                             style={{
                                 border: `2px solid ${action.color}20`,
-                                backgroundColor: `${action.color}10`
+                                backgroundColor: `${action.color}10`,
+                                minHeight: '120px'
                             }}
                         >
-                            <div 
+                            <div
                                 className="flex align-items-center justify-content-center border-circle mb-3 mx-auto"
                                 style={{
                                     width: '3rem',
@@ -100,12 +100,12 @@ const QuickActions: React.FC = () => {
                             >
                                 <i className={`${action.icon} text-xl`}></i>
                             </div>
-                            
-                            <h4 className="text-sm font-semibold m-0 mb-1" style={{ color: action.color }}>
+
+                            <h4 className="text-sm font-semibold m-0 mb-1 flex-shrink-0" style={{ color: action.color }}>
                                 {action.label}
                             </h4>
-                            
-                            <p className="text-xs text-500 m-0 line-height-3">
+
+                            <p className="text-xs text-500 m-0 line-height-3 flex-grow-1 flex align-items-center justify-content-center">
                                 {action.description}
                             </p>
                         </div>

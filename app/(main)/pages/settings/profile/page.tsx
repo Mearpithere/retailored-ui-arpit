@@ -236,10 +236,13 @@ const ProfilePage = () => {
                             <Calendar
                                 id="dob"
                                 value={profile.dateOfBirth}
-                                onChange={(e) => setProfile(prev => ({
-                                    ...prev,
-                                    dateOfBirth: e.value as Date | null
-                                }))}
+                                onChange={(e) => {
+                                    const newDate = e.value === undefined ? null : e.value;
+                                    setProfile(prev => ({
+                                        ...prev,
+                                        dateOfBirth: newDate
+                                    }));
+                                }}
                                 disabled={!isEditing}
                                 dateFormat="dd/mm/yy"
                                 showIcon

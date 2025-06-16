@@ -379,6 +379,7 @@ const Products = () => {
           seq: (prev.measurements?.length || 0) + 1,
         },
       ],
+      
     }));
   
     setNewMeasurement({ measurement_name: '', data_type: 'number' });

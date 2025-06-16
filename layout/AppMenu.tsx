@@ -41,8 +41,7 @@ const AppMenu = () => {
         {
             label: 'Settings',
             items: [
-                { label: 'Users', icon: 'pi pi-fw pi-user', to: '/pages/settings/users', disabled: true },
-                { label: 'Configuration', icon: 'pi pi-fw pi-cog', to: '/pages/settings/configuration', disabled: true }
+                { label: 'Profile', icon: 'pi pi-fw pi-user', to: '/pages/settings/profile' }
             ]
         }
     ];
@@ -67,8 +66,7 @@ const AppMenu = () => {
         {
             label: 'Settings',
             items: [
-                { label: 'Users', icon: 'pi pi-fw pi-user', to: '/pages/settings/users', disabled: true },
-                { label: 'Configuration', icon: 'pi pi-fw pi-cog', to: '/pages/settings/configuration', disabled: true }
+                { label: 'Profile', icon: 'pi pi-fw pi-user', to: '/pages/settings/profile' }
             ]
         }
     ];

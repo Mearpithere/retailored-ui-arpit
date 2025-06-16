@@ -7,6 +7,7 @@ import { ChartData, ChartOptions } from 'chart.js';
 import React, { useContext, useEffect, useState } from 'react';
 import { LayoutContext } from '@/layout/context/layoutcontext';
 import { DashboardService } from '@/demo/service/dashboard.service';
+import QuickActions from '@/demo/components/QuickActions';
 
 const Dashboard = () => {
     const { layoutConfig } = useContext(LayoutContext);
@@ -253,6 +254,10 @@ const Dashboard = () => {
 
     return (
         <div className="grid">
+            <div className="col-12">
+                <QuickActions />
+            </div>
+
             <div className="col-12 lg:col-6 xl:col-4">
                 <div className="card mb-0">
                     {renderStatCard("This Week's Delivery (Qty)", dashboardData.ordersThisWeek, "pi-check-circle", "#00bb7e")}

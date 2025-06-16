@@ -274,7 +274,7 @@ const CustomerList = () => {
           <Skeleton width="100%" height="2rem" className="md:w-20rem" />
           <Skeleton width="100%" height="2rem" />
         </div>
-  
+
         <div className="flex flex-wrap gap-3 lg:justify-content-start">
           {[...Array(6)].map((_, i) => (
             <Card key={i} className="flex flex-column w-full sm:w-12rem md:w-16rem lg:w-20rem xl:w-22rem">
@@ -288,7 +288,7 @@ const CustomerList = () => {
                 </div>
                 <Skeleton width="4.5rem" height="1.5rem" />
               </div>
-  
+
               <div className="flex justify-content-end gap-2 mt-3">
                 <Skeleton shape="circle" size="2rem" />
                 <Skeleton shape="circle" size="2rem" />
@@ -298,7 +298,7 @@ const CustomerList = () => {
         </div>
       </div>
     );
-  }  
+  }
 
   return (
     <>
